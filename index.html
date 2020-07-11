@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://kit.fontawesome.com/c3da8204db.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="./index.css">
+    <script>
+        function a() {
+            document.getElementById("card").classList.toggle("card_flipped");
+        }
+    </script>
+    <title>Samuel Fry</title>
+  </head>
+  <body>
+    <div class="page">
+        <div class="container">
+                <div class="card" id="card">
+                    <div class="card_inner">
+                        <div class="card_front">
+                            <div class="slide lazyloaded"></div>
+                            <div class="image">
+                                <img
+                                    class="lazyloaded"
+                                    src="./assets/profile.jpg"
+                                    alt="Samuel Fry"
+                                />
+                            </div>
+                            <div class="title">Samuel Fry</div>
+                            <div class="subtitle">Web Developer</div>
+                            <div class="social">
+                                <a target="_blank" href="https://github.com/samfry13"><span class="fab fa-github"></span></a>
+                                <a target="_blank" href="https://www.linkedin.com/in/samuel-fry13/"><span class="fab fa-linkedin"></span></a>
+                            </div>
+                            <div class="links">
+                                <a href="./assets/Resume.pdf" download>Download Resume <span class="fas fa-download"></span></a>
+                                <a href="mailto:samuel.fry13@gmail.com">Contact Me <span class="fas fa-envelope"></span></a>
+                                <a onclick="a()" href="#">More Info <span class="fas fa-arrow-right"></span></a>
+                            </div>
+                        </div>
+                        <div class="card_back">
+                            <div class="about">
+                                <h1>About</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim neque volutpat ac tincidunt vitae semper quis. Cursus vitae congue mauris rhoncus aenean vel elit. Orci dapibus ultrices in iaculis nunc sed augue. Sit amet porttitor eget dolor morbi non arcu. Pharetra massa massa ultricies mi quis hendrerit dolor magna. At lectus urna duis convallis convallis tellus id. Sapien pellentesque habitant morbi tristique senectus et netus. Elementum facilisis leo vel fringilla est ullamcorper. Sed libero enim sed faucibus. Magna sit amet purus gravida quis blandit turpis cursus in. Sapien et ligula ullamcorper malesuada. Augue mauris augue neque gravida in fermentum. At elementum eu facilisis sed odio morbi quis. Vitae auctor eu augue ut lectus arcu bibendum at varius. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Odio morbi quis commodo odio aenean sed adipiscing diam donec.</p>
+                            </div>
+                            <div class="projects">
+
+                            </div>
+                            <div class="links">
+                                <a onclick="a()" href="#"><span class="fas fa-arrow-left"></span> Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
