@@ -19,9 +19,13 @@ function App() {
                         <div class="title">Samuel Fry</div>
                         <div class="subtitle">Web Developer</div>
                         <div class="social">
-                            <a target="_blank" href="">
-                                <span class="fab fa-github"></span>
-                            </a>
+                            <a target="_blank" href="https://github.com/samfry13"><span class="fab fa-github"></span></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/samuel-fry13/"><span class="fab fa-linkedin"></span></a>
+                        </div>
+                        <div class="links">
+                            <a href="#">Download Resume <span class="fas fa-download"></span></a>
+                            <a href="mailto:samuel.fry13@gmail.com">Contact Me <span class="fas fa-envelope"></span></a>
+                            <a href="#">More Info <span class="fas fa-arrow-right"></span></a>
                         </div>
                     </div>
                     <div className="card_back">

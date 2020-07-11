@@ -10,9 +10,7 @@
     perspective: 2000px;
 }
 
-.card:hover .card_inner,
-.card:active .card_inner,
-.card:focus .card_inner {
+.card_flipped .card_inner {
     transform: rotateY(180deg);
 }
 
@@ -157,6 +155,52 @@
     margin: 0 6px;
     display: inline-block;
     vertical-align: middle;
+}
+
+.links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+}
+
+.links:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background: radial-gradient(ellipse at left, rgba(197,202,213,.15) 0%, rgba(255,255,255,0) 70%);
+}
+
+.links a {
+    color: rgba(255, 255, 255, 0.85);
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+}
+
+.links a:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: radial-gradient(ellipse at top, rgba(197,202,213,.15) 0%, rgba(255,255,255,0) 70%);
 }
 
 a {
