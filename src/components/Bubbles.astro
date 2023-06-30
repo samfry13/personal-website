@@ -1,38 +1,60 @@
-<ul class="bg-bubbles">
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
+<script>
+  const isAboveScreen = (element: Element) => {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom <= 0
+    );
+  };
+
+  const createBubble = (container: HTMLElement) => {
+    const speed = Math.floor(Math.random() * 20 + 20);
+    const size = Math.floor((Math.random() * 16 + 1) * 10);
+    const startX = Math.floor(Math.random() * 100) + 1;
+    const startDelay = Math.floor(Math.random() * 10) + 1;
+
+    const bubble = document.createElement('li');
+    bubble.style.position = 'absolute';
+    bubble.style.listStyle = 'none';
+    bubble.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+    bubble.style.transitionTimingFunction = 'linear';
+
+    bubble.style.height = `${size}px`;
+    bubble.style.width = `${size}px`;
+    bubble.style.bottom = '-170px';
+    bubble.style.left = `${startX}%`;
+
+    bubble.style.animationName = 'square';
+    bubble.style.animationDuration = `${speed}s`;
+    bubble.style.animationDelay = `${startDelay}s`;
+
+    const intervalId = setInterval(() => {
+      if (isAboveScreen(bubble)) {
+        clearInterval(intervalId);
+        bubble.remove();
+        createBubble(container);
+      }
+    }, 10);
+
+    container.appendChild(bubble);
+  };
+
+  const start = () => {
+    const bubbleContainer = document.getElementById('bg-bubbles');
+    for (let i = 0; i < 10; i++) {
+      createBubble(bubbleContainer);
+    }
+  };
+
+  start();
+</script>
+
+<div class="absolute inset-0 -z-10">
+  <ul id="bg-bubbles" class="relative h-full w-full"></ul>
+</div>
 
 <style>
-  .bg-bubbles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-  .bg-bubbles li {
-    position: absolute;
-    list-style: none;
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.15);
-    bottom: -160px;
-    -webkit-animation: square 25s infinite;
-    animation: square 40s infinite;
-    -webkit-transition-timing-function: linear;
-    transition-timing-function: linear;
-  }
   .bg-bubbles li:nth-child(1) {
     left: 10%;
   }

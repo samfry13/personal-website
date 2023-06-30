@@ -1,81 +1,72 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Bubbles from "../components/Bubbles.astro";
-import GithubIcon from "../components/icons/github.astro";
-import LinkedInIcon from "../components/icons/linkedin.astro";
-import DownloadIcon from "../components/icons/download.astro";
-import EnvelopeIcon from "../components/icons/envelope.astro";
+import Layout from '../layouts/Layout.astro';
+import Bubbles from '../components/Bubbles.astro';
+import GithubIcon from '../components/icons/github.astro';
+import LinkedInIcon from '../components/icons/linkedin.astro';
+import DownloadIcon from '../components/icons/download.astro';
+import EnvelopeIcon from '../components/icons/envelope.astro';
 ---
 
 <Layout title="Samuel Fry">
-  <div class="w-full max-w-full overflow-hidden rounded-xl sm:max-w-screen-sm">
-    <div class="bg-slate-700 text-white text-opacity-90">
-      <div
-        class="relative before:absolute before:-bottom-2/3 before:-left-1/4 before:h-3/4 before:w-full before:rotate-12 before:bg-slate-700 after:absolute after:-bottom-2/3 after:left-1/4 after:h-3/4 after:w-full after:-rotate-12 after:bg-slate-700"
-      >
-        <img
-          class="h-80 w-full object-cover"
-          src="/bg-photo.webp"
-          alt="Keyboard"
-        />
-      </div>
-
-      <div class="flex flex-col items-center gap-2">
-        <div
-          class="relative -mt-20 before:absolute before:-left-2.5 before:top-2.5 before:h-full before:w-full before:rounded-full before:bg-gradient-to-tr before:from-[rgba(255,152,0,0.4)] before:to-transparent"
-        >
-          <img
-            class="relative rounded-full border-2 border-slate-600"
-            src="/profile.webp"
-            alt="Samuel Fry"
-            height="146"
-            width="146"
-          />
-        </div>
-
-        <main class="relative mt-4 flex w-full flex-col items-center">
-          <h1 class="text-4xl">Samuel Fry</h1>
-          <code class="mt-2.5 text-base text-orange-400">Web Developer</code>
-
-          <div class="mb-16 mt-6 flex gap-4">
-            <a
-              target="_blank"
-              href="https://github.com/samfry13"
-              aria-label="Github"
-            >
-              <GithubIcon />
-            </a>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/samuel-fry13/"
-              aria-label="Linkedin"
-            >
-              <LinkedInIcon />
-            </a>
-          </div>
-
-          <div
-            class="relative flex w-full before:absolute before:left-0 before:right-0 before:h-px before:bg-gradient-radial before:from-gray-500 before:to-transparent"
-          >
-            <a
-              class="relative flex flex-1 items-center justify-center gap-2 py-6 text-sm uppercase transition-all before:absolute before:bottom-0 before:right-0 before:top-0 before:w-px before:bg-gradient-to-b before:from-gray-500 before:to-transparent hover:bg-slate-600"
-              href="https://storage.samuelfry.com/personal-website/Resume.pdf"
-              download
-            >
-              <DownloadIcon />
-              Download Resume
-            </a>
-            <a
-              class="flex flex-1 items-center justify-center gap-2 py-6 text-sm uppercase transition-all hover:bg-slate-600"
-              href="mailto:sam@samuelfry.com"
-            >
-              <EnvelopeIcon />
-              Contact Me
-            </a>
-          </div>
-        </main>
-      </div>
-    </div>
+  <div
+    class="relative before:absolute before:-bottom-2/3 before:-left-1/4 before:h-3/4 before:w-full before:rotate-12 before:bg-slate-700 after:absolute after:-bottom-2/3 after:left-1/4 after:h-3/4 after:w-full after:-rotate-12 after:bg-slate-700"
+  >
+    <img class="h-80 w-full object-cover" src="/bg-photo.webp" alt="Keyboard" />
   </div>
-  <Bubbles />
+
+  <div class="flex flex-col items-center gap-2">
+    <div
+      class="relative -mt-20 before:absolute before:-left-2.5 before:top-2.5 before:h-full before:w-full before:rounded-full before:bg-gradient-to-tr before:from-[rgba(255,152,0,0.4)] before:to-transparent"
+    >
+      <img
+        class="relative rounded-full border-2 border-slate-600"
+        src="/profile.webp"
+        alt="Samuel Fry"
+        height="146"
+        width="146"
+      />
+    </div>
+
+    <main class="relative mt-4 flex w-full flex-col items-center">
+      <h1 class="text-4xl">Samuel Fry</h1>
+      <code class="mt-2.5 text-base text-orange-400">Web Developer</code>
+
+      <div class="mb-16 mt-6 flex gap-4">
+        <a
+          target="_blank"
+          href="https://github.com/samfry13"
+          aria-label="Github"
+        >
+          <GithubIcon />
+        </a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/samuel-fry13/"
+          aria-label="Linkedin"
+        >
+          <LinkedInIcon />
+        </a>
+      </div>
+
+      <div
+        class="relative flex w-full before:absolute before:left-0 before:right-0 before:h-px before:bg-gradient-radial before:from-gray-500 before:to-transparent"
+      >
+        <a
+          class="relative flex flex-1 items-center justify-center gap-2 py-6 text-sm uppercase transition-all before:absolute before:bottom-0 before:right-0 before:top-0 before:w-px before:bg-gradient-to-b before:from-gray-500 before:to-transparent hover:bg-slate-600"
+          href="https://storage.samuelfry.com/personal-website/Resume.pdf"
+          download
+        >
+          <DownloadIcon />
+          Download Resume
+        </a>
+        <a
+          class="flex flex-1 items-center justify-center gap-2 py-6 text-sm uppercase transition-all hover:bg-slate-600"
+          href="mailto:sam@samuelfry.com"
+        >
+          <EnvelopeIcon />
+          Contact Me
+        </a>
+      </div>
+    </main>
+  </div>
 </Layout>
