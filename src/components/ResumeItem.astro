@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  company: string;
+  startDate: string;
+  endDate: string;
+  items?: string[];
+}
+const { title, company, startDate, endDate, items } = Astro.props;
+---
+
+<div class="flex w-full">
+  <h2 class="text-md mb-2 mt-4 flex-1">
+    <span class="text-blue-700">{title}</span>, <i class="font-extralight"
+      >{company}</i
+    >
+  </h2>
+  <p class="mt-4 text-sm font-semibold">{startDate} - {endDate}</p>
+</div>
+{
+  items && (
+    <ul class="list-outside list-disc pl-4 text-sm">
+      {items.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  )
+}
