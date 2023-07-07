@@ -1,0 +1,100 @@
+---
+import ResumeItem from '../components/ResumeItem.astro';
+import ResumeSection from '../components/ResumeSection.astro';
+import Layout from '../layouts/Layout.astro';
+import PrintIcon from '../components/icons/print.astro';
+---
+
+<Layout title="Samuel Fry - Resume">
+  <main class="relative bg-white p-4 text-black print:p-0 print:pt-0">
+    <button
+      onclick="window.print()"
+      class="absolute right-4 top-4 rounded-lg p-2 text-slate-600 transition-all hover:bg-slate-100 print:hidden"
+    >
+      <PrintIcon />
+    </button>
+
+    <section>
+      <h1 class="text-center text-xl uppercase">Samuel <strong>Fry</strong></h1>
+      <p class="text-center text-xs">
+        <strong>(801) 473-9449</strong> | <a href="mailto:sam@samuelfry.com"
+          >sam@samuelfry.com</a
+        >
+      </p>
+    </section>
+
+    <ResumeSection title="Employment">
+      <ResumeItem
+        title="Software Engineer II"
+        company="Cameo"
+        startDate="Jan 2022"
+        endDate="May 2022"
+        items={[
+          'Iterated, developed, tested, and maintained the frontpage and profile pages of the cameo.com website',
+          'Developed and pushed forward better testing strategies to reduce tech debt while refactoring',
+        ]}
+      />
+
+      <ResumeItem
+        title="Software Engineer"
+        company="Principles: A Ray Dalio Company"
+        startDate="May 2021"
+        endDate="Jan 2022"
+        items={[
+          'Worked with designers to bring to life the principles of Ray Dalio through SaaS',
+          'Helped iterate designs, and work through feedback to produce high quality user experiences',
+          'Built reusable, highly testable components using React/Typescript/Redux',
+          'Integrated with CI/CD to automate testing through Github Actions to maintain high uptime and ensure high quality code',
+        ]}
+      />
+
+      <ResumeItem
+        title="Full Stack Developer"
+        company="ZSoft, Inc."
+        startDate="March 2019"
+        endDate="May 2021"
+        items={[
+          'Helped to build new web solution for management of 4h groups nationwide in React',
+          'Iterated on previously built recordkeeping software for integration into a new system',
+          'Helped maintain and iterate upon a RESTful API through a Java backend for seamless interaction with the database from the front end',
+          'Built from scratch a Learning Management Software (LMS) to work with SCORM standards to integrate into a new system',
+          'Maintained high productivity while transitioning to work from home/in office hybrid working conditions',
+        ]}
+      />
+
+      <ResumeItem
+        title="Assistant to Head of IT"
+        company="J. Rueben Clark Law School, BYU"
+        startDate="May 2017"
+        endDate="August 2018"
+        items={[
+          'Wrote scripts in Perl that programmatically downloaded and sorted through over 1 billion words to be analyzed and processed to be loaded into the Corpus Linguistics Database to help understand historical context for wording in law making',
+          'Optically analyzed more than 36,000 court briefs to filter and censor keywords from the public database',
+        ]}
+      />
+    </ResumeSection>
+
+    <ResumeSection title="Education">
+      <ResumeItem
+        title="Bachelor of Science in Computer Science"
+        company="BYU"
+        startDate="August 2016"
+        endDate="August 2020"
+      />
+    </ResumeSection>
+
+    <ResumeSection title="Personal Projects / Extracurricular Activities">
+      <ul class="mt-2 list-outside list-disc pl-4 text-sm">
+        <li>Maintain my own self-hosted server using Docker and Cloudflare</li>
+        <li>
+          Built a searchable image database for a costume reference archive to
+          organize, tag, and view reference images for use in costume design
+          using NextJS, and Cloudflare D1/R2
+        </li>
+        <li>
+          Helped build a mobile game with a friend in Unity with scripts in C#
+        </li>
+      </ul>
+    </ResumeSection>
+  </main>
+</Layout>
