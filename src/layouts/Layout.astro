@@ -2,12 +2,13 @@
 import Bubbles from '../components/Bubbles.svelte';
 export interface Props {
   title: string;
+  baseColor?: string;
 }
 
-const { title } = Astro.props;
+const { title, baseColor = 'latte' } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,12 +22,12 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="m-0 flex min-h-screen w-full items-center justify-center overflow-scroll bg-slate-500 py-8 print:p-0"
+    class={`${baseColor} bg-overlay2 m-0 flex min-h-screen w-full items-center justify-center overflow-scroll py-8 print:p-0 selection:bg-overlay2/20`}
   >
     <div
       class="w-full max-w-full overflow-hidden rounded-xl sm:max-w-screen-sm"
     >
-      <div class="bg-slate-700 text-white text-opacity-90">
+      <div class="bg-base text-text">
         <slot />
       </div>
     </div>
