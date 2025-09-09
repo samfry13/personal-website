@@ -1,5 +1,4 @@
 ---
-import Bubbles from '../components/Bubbles.svelte';
 export interface Props {
   title: string;
   baseColor?: string;
@@ -22,7 +21,7 @@ const { title, baseColor = 'latte' } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class={`${baseColor} background from-overlay2 to-overlay0 from-70% bg-fixed m-0 flex min-h-screen w-full items-center justify-center overflow-scroll py-8 print:p-0 selection:bg-overlay2/20`}
+    class={`${baseColor} background from-overlay2 to-overlay0 from-70% bg-fixed m-0 flex min-h-screen w-full items-center justify-center py-8 print:p-0 selection:bg-overlay2/20`}
   >
     <div
       class="w-full max-w-full overflow-hidden rounded-xl sm:max-w-screen-sm"
@@ -31,14 +30,13 @@ const { title, baseColor = 'latte' } = Astro.props;
         <slot />
       </div>
     </div>
-    <Bubbles client:only="svelte" />
   </body>
 </html>
 
 <style>
   .background {
-    background-image: linear-gradient(to top, var(--tw-gradient-stops)),
-      url(noise.png);
+    background-image:
+      linear-gradient(to top, var(--tw-gradient-stops)), url(noise.png);
   }
 </style>
 
@@ -46,9 +44,10 @@ const { title, baseColor = 'latte' } = Astro.props;
   * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    font-family:
+      -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
