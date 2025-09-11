@@ -8,17 +8,17 @@ import ListIcon from '../components/icons/list.astro';
 
 <Layout title="Samuel Fry" baseColor="mocha">
   <div
-    class="before:bg-base after:bg-base relative before:absolute before:-bottom-2/3 before:-left-1/4 before:h-3/4 before:w-full before:rotate-12 after:absolute after:-bottom-2/3 after:left-1/4 after:h-3/4 after:w-full after:-rotate-12"
+    class="relative before:absolute before:-bottom-2/3 before:-left-1/4 before:h-3/4 before:w-full before:rotate-12 before:bg-base after:absolute after:-bottom-2/3 after:left-1/4 after:h-3/4 after:w-full after:-rotate-12 after:bg-base"
   >
     <img class="h-80 w-full object-cover" src="/bg-photo.webp" alt="Keyboard" />
   </div>
 
   <div class="flex flex-col items-center gap-2">
     <div
-      class="before:from-peach/60 relative -mt-20 before:absolute before:-left-2.5 before:top-2.5 before:h-full before:w-full before:rounded-full before:bg-gradient-to-r before:to-transparent"
+      class="group relative -mt-20 before:absolute before:-left-1 before:top-1 before:h-full before:w-full before:rounded-full before:bg-gradient-to-r before:from-peach/60 before:to-transparent"
     >
       <img
-        class="border-surface2 relative rounded-full border-2"
+        class="relative rounded-full border-2 border-surface2 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-active:translate-x-0 group-active:translate-y-0"
         src="/profile.webp"
         alt="Samuel Fry"
         height="146"
@@ -28,7 +28,7 @@ import ListIcon from '../components/icons/list.astro';
 
     <main class="relative mt-4 flex w-full flex-col items-center">
       <h1 class="text-4xl">Samuel Fry</h1>
-      <code class="text-peach mt-2.5 text-base">Web Developer</code>
+      <code class="mt-2.5 text-base text-peach">Web Developer</code>
 
       <div class="mb-16 mt-6 flex gap-4">
         <a
