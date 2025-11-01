@@ -21,24 +21,17 @@ const { title, baseColor = 'latte' } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class={`${baseColor} background from-overlay2 to-overlay0 from-70% bg-fixed m-0 flex min-h-screen w-full items-center justify-center py-8 print:p-0 selection:bg-overlay2/20`}
+    class={`${baseColor} bg-noise print:bg-none from-overlay2 to-overlay0 from-70% bg-fixed m-0 flex min-h-screen w-full items-center justify-center py-8 print:p-0 selection:bg-overlay2/20`}
   >
     <div
       class="w-full max-w-full overflow-hidden rounded-xl sm:max-w-screen-sm"
     >
-      <div class="bg-base text-text">
+      <div class="bg-base text-text print:bg-inherit">
         <slot />
       </div>
     </div>
   </body>
 </html>
-
-<style>
-  .background {
-    background-image:
-      linear-gradient(to top, var(--tw-gradient-stops)), url(noise.png);
-  }
-</style>
 
 <style is:global>
   * {

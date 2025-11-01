@@ -1,30 +1,36 @@
 ---
+import Chip from '../components/Chip.astro';
+
 interface Props {
   title: string;
   company: string;
   startDate: string;
   endDate: string;
-  items?: string[];
+  description?: string;
+  chips?: string[];
 }
-const { title, company, startDate, endDate, items } = Astro.props;
+const { title, company, startDate, endDate, description, chips } = Astro.props;
 ---
 
 <div class="flex w-full">
-  <h2 class="text-md mb-2 mt-4 flex-1">
-    <span class="text-text">{title}</span>, <i
-      class="font-extralight text-subtext0">{company}</i
+  <h2 class="text-md mb-2 mt-4 flex-1 font-semibold">
+    <span class="text-text">{title}</span>, <i class="font-normal text-subtext0"
+      >{company}</i
     >
   </h2>
   <p class="mt-4 text-sm font-semibold text-subtext1">
     {startDate} - {endDate}
   </p>
 </div>
+
+{description && <div class="text-md ml-2">{description}</div>}
+
 {
-  items && (
-    <ul class="list-outside list-disc pl-4 text-sm">
-      {items.map((item) => (
-        <li>{item}</li>
+  chips && (
+    <div class="ml-2 mt-1 flex gap-1">
+      {chips.map((chip) => (
+        <Chip>{chip}</Chip>
       ))}
-    </ul>
+    </div>
   )
 }

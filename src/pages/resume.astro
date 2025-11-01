@@ -7,7 +7,7 @@ import ChevronLeft from '../components/icons/chevronLeft.astro';
 ---
 
 <Layout title="Samuel Fry - Resume">
-  <main class="relative bg-base p-4 text-text print:p-0 print:pt-0">
+  <main class="relative p-4 text-text print:p-0 print:pt-0">
     <a
       href="/"
       class="absolute left-4 top-4 rounded-lg p-2 text-subtext0 transition-all hover:bg-overlay2/20 print:hidden"
@@ -35,6 +35,8 @@ import ChevronLeft from '../components/icons/chevronLeft.astro';
         company="Collectors"
         startDate="Mar 2022"
         endDate="Present"
+        description="PSACard - Supporting and optimizing all of our marketing and user research pages"
+        chips={['React', 'NextJS', 'Node', 'Storybook']}
       />
 
       <ResumeItem
@@ -42,6 +44,8 @@ import ChevronLeft from '../components/icons/chevronLeft.astro';
         company="Collectors"
         startDate="May 2022"
         endDate="Mar 2024"
+        description="Collectors ID - A single sign on platform to support all of the Collectors brands"
+        chips={['React', 'NextJS', 'Okta', 'SSO']}
       />
 
       <ResumeItem
@@ -49,10 +53,8 @@ import ChevronLeft from '../components/icons/chevronLeft.astro';
         company="Cameo"
         startDate="Jan 2022"
         endDate="May 2022"
-        items={[
-          'Iterated, developed, tested, and maintained the frontpage and profile pages of the cameo.com website',
-          'Developed and pushed forward better testing strategies to reduce tech debt while refactoring',
-        ]}
+        description="Building and testing experiments for the user experience pages"
+        chips={['React']}
       />
 
       <ResumeItem
@@ -60,37 +62,26 @@ import ChevronLeft from '../components/icons/chevronLeft.astro';
         company="Principles: A Ray Dalio Company"
         startDate="May 2021"
         endDate="Jan 2022"
-        items={[
-          'Worked with designers to bring to life the principles of Ray Dalio through SaaS',
-          'Helped iterate designs, and work through feedback to produce high quality user experiences',
-          'Built reusable, highly testable components using React/Typescript/Redux',
-          'Integrated with CI/CD to automate testing through Github Actions to maintain high uptime and ensure high quality code',
-        ]}
+        description="Dot Collector - a real-time, micro-feedback system to create a continuous development culture"
+        chips={['React', 'Redux']}
       />
 
       <ResumeItem
         title="Full Stack Developer"
         company="ZSoft, Inc."
-        startDate="March 2019"
+        startDate="Mar 2019"
         endDate="May 2021"
-        items={[
-          'Helped to build new web solution for management of 4h groups nationwide in React',
-          'Iterated on previously built recordkeeping software for integration into a new system',
-          'Helped maintain and iterate upon a RESTful API through a Java backend for seamless interaction with the database from the front end',
-          'Built from scratch a Learning Management Software (LMS) to work with SCORM standards to integrate into a new system',
-          'Maintained high productivity while transitioning to work from home/in office hybrid working conditions',
-        ]}
+        description="Building 4H management and learning software for groups across the US"
+        chips={['React', 'Java', 'Postgres']}
       />
 
       <ResumeItem
         title="Assistant to Head of IT"
         company="J. Rueben Clark Law School, BYU"
         startDate="May 2017"
-        endDate="August 2018"
-        items={[
-          'Wrote scripts in Perl that programmatically downloaded and sorted through over 1 billion words to be analyzed and processed to be loaded into the Corpus Linguistics Database to help understand historical context for wording in law making',
-          'Optically analyzed more than 36,000 court briefs to filter and censor keywords from the public database',
-        ]}
+        endDate="Aug 2018"
+        description="Scripting for analyzing and constructing a Corpus Linguistics Database"
+        chips={['Perl', 'Microsoft Access']}
       />
     </ResumeSection>
 
@@ -98,21 +89,23 @@ import ChevronLeft from '../components/icons/chevronLeft.astro';
       <ResumeItem
         title="Bachelor of Science in Computer Science"
         company="BYU"
-        startDate="August 2016"
-        endDate="August 2020"
+        startDate="Aug 2016"
+        endDate="Aug 2020"
       />
     </ResumeSection>
 
     <ResumeSection title="Personal Projects / Extracurricular Activities">
       <ul class="mt-2 list-outside list-disc pl-4 text-sm">
-        <li>Maintain my own self-hosted server using Docker and Cloudflare</li>
+        <li>
+          Maintain a self-hosted server using Proxmox, Docker, and Cloudflare
+        </li>
+        <li>
+          Created a small desktop app to help me organize, optimize, and trim
+          video clips
+        </li>
         <li>
           Built a searchable image database for a costume reference archive to
           organize, tag, and view reference images for use in costume design
-          using NextJS, and Cloudflare D1/R2
-        </li>
-        <li>
-          Helped build a mobile game with a friend in Unity with scripts in C#
         </li>
       </ul>
     </ResumeSection>

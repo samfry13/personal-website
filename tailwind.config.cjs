@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'noise': 'linear-gradient(to top, var(--tw-gradient-stops)), url(noise.png)',
       },
     },
   },
