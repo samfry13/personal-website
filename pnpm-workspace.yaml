@@ -1,0 +1,27 @@
+allowBuilds:
+  esbuild: false
+  sharp: false
+minimumReleaseAgeExclude:
+  - glob@10.5.0
+  - devalue@5.6.2
+  - diff@5.2.2
+  - mdast-util-to-hast@13.2.1
+  - devalue@5.6.3
+  - minimatch@9.0.6
+  - rollup@4.59.0
+  - minimatch@9.0.7
+  - devalue@5.6.4
+  - h3@1.15.6
+  - h3@1.15.9
+  - smol-toml@1.6.1
+  - astro@5.18.1
+  - brace-expansion@2.0.3
+  - picomatch@2.3.2
+  - picomatch@4.0.4
+  - yaml@2.8.3
+  - defu@6.1.5
+  - vite@6.4.2
+  - h3@1.15.5
+  - postcss@8.5.10
+  - astro@6.1.6
+  - astro@6.1.10
